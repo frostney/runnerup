@@ -4,7 +4,8 @@
   "description": "Sprint planning tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run gulp test",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/frostney/runnerup/issues"
   },
-  "homepage": "https://github.com/frostney/runnerup"
+  "homepage": "https://github.com/frostney/runnerup",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
 }
