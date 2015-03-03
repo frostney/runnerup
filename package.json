@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/frostney/runnerup",
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
   }
 }
