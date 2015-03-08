@@ -32,12 +32,19 @@ var scripts = function() {
     .pipe(gulp.dest(paths.build.debug));
 };
 
-gulp.task('scripts', scripts);
-
-gulp.task('template', function() {
+var template = function() {
   return gulp.src('templates/index.html')
     .pipe(consolidate('handlebars'))
     .pipe(gulp.dest(paths.build.debug));
+};
+
+gulp.task('scripts', scripts);
+
+gulp.task('template', template);
+
+gulp.task('watch', function() {
+  gulp.watch('src/**/*.js', scripts);
+  gulp.watch('templates/*.html', template);
 });
 
 gulp.task('default', ['clean'], scripts);
