@@ -43,8 +43,8 @@ gulp.task('scripts', scripts);
 gulp.task('template', template);
 
 gulp.task('watch', function() {
-  gulp.watch('src/**/*.js', scripts);
-  gulp.watch('templates/*.html', template);
+  gulp.watch('src/**/*.js', ['scripts']);
+  gulp.watch('templates/*.html', ['template']);
 });
 
-gulp.task('default', ['clean'], scripts);
+gulp.task('default', ['clean'], scripts, template);
