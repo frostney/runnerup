@@ -1,22 +1,21 @@
 module.exports = {
   target: 'web',
   devtool: '#source-map',
-  entry: './src/app.js',
+  entry: {
+    app: './src/app'
+  },
   output: {
-    filename: 'all.js',
+    filename: 'build/debug/all.js',
     sourceMapFilename: '[file].map'
   },
   module: {
     loaders: [
-      {test: /\.js/, loader: 'babel-loader'}
+      {test: /\.js$/, loader: 'babel-loader'}
     ],
-    noParse: [/\.min\.js/, /\/node_modules\/react\/dist\/react\.js/]
+    noParse: [/\.min\.js/]
   },
   resolve: {
-    alias: {
-      react: 'react/dist/react.js'
-    },
-    extensions: ['', '.js', '.json', '.jsx'],
+    extensions: ['', '.js', '.json'],
     modulesDirectories: ['node_modules']
   }
 };
