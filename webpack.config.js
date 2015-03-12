@@ -6,7 +6,8 @@ module.exports = {
   },
   output: {
     filename: 'build/debug/all.js',
-    sourceMapFilename: '[file].map'
+    sourceMapFilename: '[file].map',
+    publicPath: ''
   },
   module: {
     loaders: [
