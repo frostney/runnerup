@@ -10,6 +10,7 @@
   "mainInput": "main",
   "mainOutput": "main",
   "dependencies": {
+    "bootstrap": "^3.3.4",
     "react": "~0.13.0",
     "react-bootstrap": "^0.17.0",
     "react-router": "~0.13.0"
