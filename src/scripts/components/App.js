@@ -2,6 +2,8 @@
 
 var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
+var {RouteHandler} = require('react-router');
+var {Navbar} = require('react-bootstrap');
 
 // CSS
 require('../../styles/main.less');
@@ -12,9 +14,10 @@ var App = React.createClass({
   render: function() {
     return (
       <div className='main'>
-        <ReactTransitionGroup transitionName="fade">
-          <img src={imageURL} />
-        </ReactTransitionGroup>
+        <Navbar brand="RunnerUp" />
+        <div className="container container-fluid">
+          <RouteHandler />
+        </div>
       </div>
     );
   }
