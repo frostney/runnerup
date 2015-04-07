@@ -25,6 +25,15 @@ module.exports = function (grunt) {
       }
     },
 
+    'gh-pages': {
+      deploy: {
+        options: {
+          base: 'dist'
+        },
+        src: ['**/*']
+      }
+    },
+
     'webpack-dev-server': {
       options: {
         hot: true,
@@ -121,6 +130,8 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['karma']);
 
   grunt.registerTask('build', ['clean', 'copy', 'webpack']);
+
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
 
   grunt.registerTask('default', ['serve']);
 };
