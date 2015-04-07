@@ -32,5 +32,6 @@ $RECYCLE.BIN/
 
 node_modules/
 .tmp
+.grunt
 dist
 /src/scripts/main.js
