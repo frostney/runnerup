@@ -5,6 +5,10 @@ class Task {
 
     this.subtasks = [];
   }
+
+  addTask() {
+    this.subtasks.push(new Task(arguments));
+  }
 }
 
 export default Task;
