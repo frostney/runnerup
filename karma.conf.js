@@ -27,7 +27,7 @@ module.exports = function (config) {
           loader: 'url-loader?limit=10000&mimetype=image/png'
         }, {
           test: /\.js$/,
-          loader: 'jsx-loader?harmony'
+          loader: 'babel-loader'
         }, {
           test: /\.less/,
           loader: 'style-loader!css-loader!less-loader'

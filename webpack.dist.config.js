@@ -50,7 +50,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'jsx-loader?harmony'
+      loader: 'babel-loader'
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
