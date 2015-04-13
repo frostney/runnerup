@@ -13,7 +13,13 @@ var Project = React.createClass({
     router: React.PropTypes.func
   },
   render: function () {
-    const {name, sprint} = this.context.router.getCurrentParams();
+    const params = this.context.router.getCurrentParams();
+
+    if (params && Object.keys(params).length > 0) {
+      var {name, sprint} = params;
+    } else {
+
+    }
 
     return (
       <div>
